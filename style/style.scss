@@ -1,0 +1,123 @@
+$primary-color: #9356DC;
+$Secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url('../fonts/Shrikhand-Regular.ttf') format('truetype'),
+    }
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype'),
+    }
+
+@mixin flex-columncenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+@mixin flex-allcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    body{
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        a{
+            text-decoration: none;
+        }
+    }
+
+    header{
+        @include flex-columncenter()
+    }
+
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+
+        #nav-logo{
+            width: 50%;
+        }
+        
+    }
+
+    #header-content{
+        @include flex-columncenter;
+
+        &__head{
+            @include flex-allcenter;
+            background-color: #f6f6f6;
+            width: 100%;
+            box-shadow: inset 0 8px 10px -10px black;
+            font-weight: bold;
+        }
+
+        &__desc{
+            @include flex-columncenter;
+            width: 80%;
+            text-align: center;
+        }
+
+        &__btn{
+            width: 220px;
+            background-image: linear-gradient(166deg, $Secondary-color, $primary-color) ;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 5px 10px 0 grey;
+        }
+    }
+
+    #main-content{
+        @include flex-columncenter;
+    }
+
+    #fonct {
+        width: 90%;
+    }
+
+    #fonct-content{
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .fonct-btn{
+        display: flex;
+        
+        &__number{
+            @include flex-allcenter;
+            border-radius: 50%;
+            border: 10px transparent;
+            background: $primary-color;
+            width: 30px;
+            height: 30px;
+            color: white;
+        }
+
+        &__content{
+            @include flex-allcenter;
+            width: 90%;
+            border-radius: 25px;
+            box-shadow: 0 2px 10px 0 grey;
+            margin-left: -15px;
+            color: black;
+            
+            &__icone{
+                color: grey;
+                margin-right: 20px;
+                margin-left: -20px;
+            }
+        }
+
+    }
