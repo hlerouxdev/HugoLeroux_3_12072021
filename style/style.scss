@@ -58,6 +58,11 @@ $tertiary-color: #99E2D0;
             width: 100%;
             box-shadow: inset 0 8px 10px -10px black;
             font-weight: bold;
+
+        }
+
+        .header-icone{
+            margin-right: 20px;
         }
 
         &__desc{
@@ -120,4 +125,108 @@ $tertiary-color: #99E2D0;
             }
         }
 
+    }
+
+    #restaurants{
+        @include flex-columncenter;
+        width: 100%;
+        background: #f6f6f6;
+
+        &-box{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-content{
+            height: 1200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .restaurants-link{
+            @include flex-columncenter;
+            height: 230px;
+            width: 100%;
+            border-radius: 25px;
+            background-color: white;
+            box-shadow: 0 5px 10px grey;
+
+            &__imgcontainer{
+                position: relative;
+
+                p{
+                    position: absolute;
+                    top: 10px;
+                    right: 20px;
+                    background: #99E2D0;
+                    color: #139273;
+                    height: 30px;
+                    width: 100px;
+                    @include flex-allcenter;
+                }
+            }
+
+            &__img{
+                width: 100%;
+                height: 140px;
+                object-fit: none;
+                border-radius: 25px 25px 0 0;
+            }
+
+            &__info{
+                height: 90px;
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+
+                &__text{
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    justify-content: space-evenly;
+                }
+
+                p, h2 {
+                    margin: 0;
+                    color: black;
+                }
+
+                .fa-heart{
+                    font-size: 25px;
+                    fill: transparent;
+                    stroke: black;
+                    stroke-width: 2;
+                }
+            }
+        }
+    }
+
+    footer{
+        @include flex-allcenter;
+        background-color: #353535;
+        color: white;
+        height: 250px;
+
+        #footer__logo{
+            filter: invert(1);
+            width: 150px;
+        }
+
+        #footer__content{
+            width: 90%;
+            line-height: 30px;
+        }
+
+        .footer__icone{
+            width: 15px;
+            margin-right: 5px;
+        }
+
+        ul{
+            list-style-type: none;
+            padding: 0;
+        }
     }
