@@ -1,5 +1,5 @@
 $primary-color: #9356DC;
-$Secondary-color: #FF79DA;
+$secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 
 @font-face {
@@ -28,7 +28,7 @@ $tertiary-color: #99E2D0;
     body{
         margin: 0;
         font-family: 'Roboto', sans-serif;
-        a{
+        a, a:visited, a:active{
             text-decoration: none;
         }
     }
@@ -73,7 +73,7 @@ $tertiary-color: #99E2D0;
 
         &__btn{
             width: 220px;
-            background-image: linear-gradient(166deg, $Secondary-color, $primary-color) ;
+            background-image: linear-gradient(166deg, $secondary-color, $primary-color);
             border-radius: 25px;
             display: flex;
             justify-content: center;
@@ -99,6 +99,11 @@ $tertiary-color: #99E2D0;
 
     .fonct-btn{
         display: flex;
+
+
+        .fa-mobile-alt{
+            font-size: 1.2em;
+        }
         
         &__number{
             @include flex-allcenter;
@@ -160,8 +165,8 @@ $tertiary-color: #99E2D0;
                     position: absolute;
                     top: 10px;
                     right: 20px;
-                    background: #99E2D0;
-                    color: #139273;
+                    background: $tertiary-color;
+                    color: darken($tertiary-color, 50%);
                     height: 30px;
                     width: 100px;
                     @include flex-allcenter;
@@ -194,15 +199,44 @@ $tertiary-color: #99E2D0;
                     color: black;
                 }
 
-                .fa-heart{
-                    font-size: 25px;
-                    fill: transparent;
-                    stroke: black;
-                    stroke-width: 2;
+                .heart-container{
+                    position:relative;
+
+                    .fa-heart{
+                        position: absolute;
+                        right: 10px;
+                        top: -20px;
+                        font-size: 25px;
+
+                        &--full{
+                            opacity: 0;
+                        }
+
+                    }
+
+                &:hover{
+
+                    .fa-heart{
+
+                        &--empty{
+                            opacity: 0;
+                        }
+
+                        &--full{
+                            opacity: 100%;
+                            background-image: linear-gradient(45deg, $secondary-color, $primary-color);
+                            -webkit-background-clip: text;
+	                        -webkit-text-fill-color: transparent;
+                        }
+
+                    }
+
+                }    
+
+                    }
                 }
             }
         }
-    }
 
     footer{
         @include flex-allcenter;
@@ -223,6 +257,10 @@ $tertiary-color: #99E2D0;
         .footer__icone{
             width: 15px;
             margin-right: 5px;
+        }
+
+        .fa-hands-helping{
+            font-size: 0.8em;
         }
 
         ul{

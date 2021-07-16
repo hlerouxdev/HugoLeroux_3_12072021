@@ -13,7 +13,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-body a {
+body a, body a:visited, body a:active {
   text-decoration: none;
 }
 
@@ -75,6 +75,10 @@ nav #nav-logo {
   -webkit-box-shadow: inset 0 8px 10px -10px black;
           box-shadow: inset 0 8px 10px -10px black;
   font-weight: bold;
+}
+
+#header-content .header-icone {
+  margin-right: 20px;
 }
 
 #header-content__desc {
@@ -141,6 +145,10 @@ nav #nav-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.fonct-btn .fa-mobile-alt {
+  font-size: 1.2em;
 }
 
 .fonct-btn__number {
@@ -252,7 +260,7 @@ nav #nav-logo {
   top: 10px;
   right: 20px;
   background: #99E2D0;
-  color: #139273;
+  color: #1b6150;
   height: 30px;
   width: 100px;
   display: -webkit-box;
@@ -307,11 +315,30 @@ nav #nav-logo {
   color: black;
 }
 
-#restaurants .restaurants-link__info .fa-heart {
+#restaurants .restaurants-link__info .heart-container {
+  position: relative;
+}
+
+#restaurants .restaurants-link__info .heart-container .fa-heart {
+  position: absolute;
+  right: 10px;
+  top: -20px;
   font-size: 25px;
-  fill: transparent;
-  stroke: black;
-  stroke-width: 2;
+}
+
+#restaurants .restaurants-link__info .heart-container .fa-heart--full {
+  opacity: 0;
+}
+
+#restaurants .restaurants-link__info .heart-container:hover .fa-heart--empty {
+  opacity: 0;
+}
+
+#restaurants .restaurants-link__info .heart-container:hover .fa-heart--full {
+  opacity: 100%;
+  background-image: linear-gradient(45deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 footer {
@@ -343,6 +370,10 @@ footer #footer__content {
 footer .footer__icone {
   width: 15px;
   margin-right: 5px;
+}
+
+footer .fa-hands-helping {
+  font-size: 0.8em;
 }
 
 footer ul {
