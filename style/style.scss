@@ -1,40 +1,13 @@
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
+@import "Utils/variables.scss";
+@import "Base/fonts.scss";
+@import "Utils/mixins.scss";
+@import "Layout/footer.scss";
+@import "Base/body.scss";
 
-@font-face {
-    font-family: 'Shrikhand';
-    src: url('../fonts/Shrikhand-Regular.ttf') format('truetype'),
-    }
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Regular.ttf') format('truetype'),
-    }
-
-@mixin flex-columncenter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     
-}
-
-@mixin flex-allcenter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-    body{
-        margin: 0;
-        font-family: 'Roboto', sans-serif;
-        a, a:visited, a:active{
-            text-decoration: none;
-        }
-    }
 
     header{
-        @include flex-columncenter()
+        @include flex-columncenter;
     }
 
     nav{
@@ -46,7 +19,7 @@ $tertiary-color: #99E2D0;
         #nav-logo{
             width: 50%;
         }
-        
+    
     }
 
     #header-content{
@@ -74,11 +47,8 @@ $tertiary-color: #99E2D0;
         &__btn{
             width: 220px;
             background-image: linear-gradient(166deg, $secondary-color, $primary-color);
-            border-radius: 25px;
-            display: flex;
-            justify-content: center;
+            @include button;
             color: white;
-            box-shadow: 0 5px 10px 0 grey;
         }
     }
 
@@ -226,6 +196,7 @@ $tertiary-color: #99E2D0;
                             opacity: 100%;
                             background-image: linear-gradient(45deg, $secondary-color, $primary-color);
                             -webkit-background-clip: text;
+                            background-clip: text;
 	                        -webkit-text-fill-color: transparent;
                         }
 
@@ -238,33 +209,49 @@ $tertiary-color: #99E2D0;
             }
         }
 
-    footer{
-        @include flex-allcenter;
-        background-color: #353535;
-        color: white;
-        height: 250px;
+    #header-content{
+        height: 250px
+    }
 
-        #footer__logo{
-            filter: invert(1);
-            width: 150px;
+    .menu-main-content{
+        @include flex-columncenter;
+        background-color: darken(white, 5%);
+        border-radius: 50px 50px 0 0;
+
+        h1{
+            font-family: 'Shrikhand';
         }
 
-        #footer__content{
+        &__header{
             width: 90%;
-            line-height: 30px;
+            @include flex-allcenter;
+            justify-content: space-between;
+
+        }
+    }
+
+    #menu{
+        width: 90%
+    }
+
+    .menu-card{
+        @include button;
+        background: white;
+
+
+        &__checkbox{
+            @include flex-allcenter;
+            width: 50px;
+            background: $tertiary-color;
+            color: white;
+            font-size: 1.5em;
         }
 
-        .footer__icone{
-            width: 15px;
-            margin-right: 5px;
-        }
+    }
 
-        .fa-hands-helping{
-            font-size: 0.8em;
-        }
-
-        ul{
-            list-style-type: none;
-            padding: 0;
-        }
+    .btn-color{
+        width: 220px;
+            background-image: linear-gradient(166deg, $secondary-color, $primary-color);
+            @include button;
+            color: white;
     }

@@ -1,0 +1,19 @@
+@mixin flex-columncenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+@mixin flex-allcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button{
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 5px 10px 0 grey;
+}

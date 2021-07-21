@@ -1,11 +1,51 @@
 @font-face {
   font-family: 'Shrikhand';
-  src: url("../fonts/Shrikhand-Regular.ttf") format("truetype");
+  src: url("../../fonts/Shrikhand-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("../../fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #353535;
+  color: white;
+  height: 250px;
+}
+
+footer #footer__logo {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  width: 150px;
+}
+
+footer #footer__content {
+  width: 90%;
+  line-height: 30px;
+}
+
+footer .footer__icone {
+  width: 15px;
+  margin-right: 5px;
+}
+
+footer .fa-hands-helping {
+  font-size: 0.8em;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 body {
@@ -106,9 +146,9 @@ nav #nav-logo {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: white;
   -webkit-box-shadow: 0 5px 10px 0 grey;
           box-shadow: 0 5px 10px 0 grey;
+  color: white;
 }
 
 #main-content {
@@ -338,10 +378,35 @@ nav #nav-logo {
   opacity: 100%;
   background-image: linear-gradient(45deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-footer {
+#header-content {
+  height: 250px;
+}
+
+.menu-main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 50px 50px 0 0;
+}
+
+.menu-main-content h1 {
+  font-family: 'Shrikhand';
+}
+
+.menu-main-content__header {
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -351,33 +416,56 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #353535;
-  color: white;
-  height: 250px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-footer #footer__logo {
-  -webkit-filter: invert(1);
-          filter: invert(1);
-  width: 150px;
-}
-
-footer #footer__content {
+#menu {
   width: 90%;
-  line-height: 30px;
 }
 
-footer .footer__icone {
-  width: 15px;
-  margin-right: 5px;
+.menu-card {
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 5px 10px 0 grey;
+          box-shadow: 0 5px 10px 0 grey;
+  background: white;
 }
 
-footer .fa-hands-helping {
-  font-size: 0.8em;
+.menu-card__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  background: #99E2D0;
+  color: white;
+  font-size: 1.5em;
 }
 
-footer ul {
-  list-style-type: none;
-  padding: 0;
+.btn-color {
+  width: 220px;
+  background-image: linear-gradient(166deg, #FF79DA, #9356DC);
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 5px 10px 0 grey;
+          box-shadow: 0 5px 10px 0 grey;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

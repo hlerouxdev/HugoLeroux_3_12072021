@@ -1,0 +1,30 @@
+footer{
+    @include flex-allcenter;
+    background-color: #353535;
+    color: white;
+    height: 250px;
+
+    #footer__logo{
+        filter: invert(1);
+        width: 150px;
+    }
+
+    #footer__content{
+        width: 90%;
+        line-height: 30px;
+    }
+
+    .footer__icone{
+        width: 15px;
+        margin-right: 5px;
+    }
+
+    .fa-hands-helping{
+        font-size: 0.8em;
+    }
+
+    ul{
+        list-style-type: none;
+        padding: 0;
+    }
+}
