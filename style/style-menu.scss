@@ -1,0 +1,82 @@
+@import "Utils/variables.scss";
+@import "Base/fonts.scss";
+@import "Utils/mixins.scss";
+@import "Layout/footer.scss";
+@import "Base/body.scss";
+
+#header-content{
+    height: 250px;
+    background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: -50px;
+}
+
+.menu-main-content{
+    @include flex-columncenter;
+    background-color: darken(white, 5%);
+    border-radius: 50px 50px 0 0;
+
+    h1{
+        font-family: 'Shrikhand';
+    }
+
+    &__header{
+        width: 90%;
+        @include flex-allcenter;
+        justify-content: space-between;
+    }
+}
+
+#menu{
+    width: 90%;
+
+    .menu__title{
+        text-transform: uppercase;
+    }
+
+    .gree-line{
+        height: 2px;
+        width: 40px;
+        background-color: $tertiary-color;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+}
+
+.menu-card{
+    @include button-menu;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    overflow: hidden;
+
+    &__bold{
+        font-weight: bold;
+    }
+
+    &__info{
+        display: flex;
+        align-items: flex-end;
+    }
+
+
+    &__checkbox{
+        @include flex-allcenter;
+        width: 75px;
+        background: $tertiary-color;
+        color: white;
+        font-size: 1.5em;
+        margin-right: -75px;
+    }
+
+}
+
+.btn-color{
+    width: 220px;
+        background-image: linear-gradient(166deg, $secondary-color, $primary-color);
+        @include button;
+        @include flex-allcenter
+        color: white;
+}

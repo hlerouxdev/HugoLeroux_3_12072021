@@ -13,7 +13,10 @@
 
 @mixin button{
     border-radius: 25px;
-    display: flex;
-    justify-content: center;
+    box-shadow: 0 5px 10px 0 grey;
+}
+
+@mixin button-menu{
+    border-radius: 15px;
     box-shadow: 0 5px 10px 0 grey;
 }
