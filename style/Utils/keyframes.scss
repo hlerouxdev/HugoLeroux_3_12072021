@@ -1,0 +1,21 @@
+@import "../Utils/variables.scss";
+
+@keyframes loader-grow {
+    to{
+      transform: scale(1.2);
+      background-color: $secondary-color;
+      opacity: 100%;
+    }
+  }
+  
+  @keyframes rotate{
+    to{
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes hide{
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+  }
