@@ -32,10 +32,10 @@
 
 @-webkit-keyframes hide {
   0% {
-    opacity: 1;
+    opacity: 100%;
   }
   90% {
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
     opacity: 0;
@@ -53,10 +53,10 @@
 
 @keyframes hide {
   0% {
-    opacity: 1;
+    opacity: 100%;
   }
   90% {
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
     opacity: 0;
@@ -69,6 +69,20 @@
   }
   100% {
     z-index: -999;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  to {
+    opacity: 100%;
+    margin-top: 0;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 100%;
+    margin-top: 0;
   }
 }
 /*# sourceMappingURL=keyframes.css.map */

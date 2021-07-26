@@ -15,12 +15,19 @@
   }
 
   @keyframes hide{
-    0%   {opacity: 1;}
-    90%  {opacity: 1;}
+    0%   {opacity: 100%;}
+    90%  {opacity: 100%;}
     100% {opacity: 0;}
     
     0% {z-index: 999;}
     99% {z-index: 999;}
     100% {z-index: -999;}
     
+  }
+
+  @keyframes fade-in{
+      to{
+          opacity: 100%;
+          margin-top: 0;
+      }
   }

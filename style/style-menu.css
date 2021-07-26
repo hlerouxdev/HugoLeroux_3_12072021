@@ -120,6 +120,94 @@ nav {
   background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
 
+@-webkit-keyframes loader-grow {
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    background-color: #FF79DA;
+    opacity: 100%;
+  }
+}
+
+@keyframes loader-grow {
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    background-color: #FF79DA;
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes hide {
+  0% {
+    opacity: 100%;
+  }
+  90% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+  0% {
+    z-index: 999;
+  }
+  99% {
+    z-index: 999;
+  }
+  100% {
+    z-index: -999;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 100%;
+  }
+  90% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+  0% {
+    z-index: 999;
+  }
+  99% {
+    z-index: 999;
+  }
+  100% {
+    z-index: -999;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  to {
+    opacity: 100%;
+    margin-top: 0;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 100%;
+    margin-top: 0;
+  }
+}
+
 .menu-main-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,9 +240,36 @@ nav {
   margin-top: 20px;
 }
 
-.menu-main-content__header .fa-heart--empty {
-  font-size: 1.5em;
-  margin-right: 20px;
+.menu-main-content__header .heart-container {
+  position: relative;
+}
+
+.menu-main-content__header .heart-container .fa-heart {
+  position: absolute;
+  right: 10px;
+  top: -20px;
+  font-size: 25px;
+  color: black;
+}
+
+.menu-main-content__header .heart-container .fa-heart--full {
+  opacity: 0;
+}
+
+.menu-main-content__header .heart-container:hover .fa-heart--empty {
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-out;
+  transition: opacity 500ms ease-out;
+}
+
+.menu-main-content__header .heart-container:hover .fa-heart--full {
+  opacity: 100%;
+  -webkit-transition: opacity 500ms ease-out;
+  transition: opacity 500ms ease-out;
+  background-image: linear-gradient(45deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .menu-main-content__header h1 {
@@ -215,6 +330,30 @@ nav {
   background: white;
   overflow: hidden;
   margin-bottom: 20px;
+  opacity: 0;
+  margin-top: 20px;
+  -webkit-animation: fade-in 1000ms forwards;
+          animation: fade-in 1000ms forwards;
+}
+
+.menu-card:nth-child(2) {
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
+}
+
+.menu-card:nth-child(3) {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.menu-card:nth-child(4) {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+
+.menu-card:nth-child(5) {
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
 }
 
 .menu-card:hover .menu-card__checkbox {
