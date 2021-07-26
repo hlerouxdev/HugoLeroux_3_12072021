@@ -1,0 +1,74 @@
+@-webkit-keyframes loader-grow {
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    background-color: #FF79DA;
+    opacity: 100%;
+  }
+}
+
+@keyframes loader-grow {
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    background-color: #FF79DA;
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+  0% {
+    z-index: 999;
+  }
+  99% {
+    z-index: 999;
+  }
+  100% {
+    z-index: -999;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+  0% {
+    z-index: 999;
+  }
+  99% {
+    z-index: 999;
+  }
+  100% {
+    z-index: -999;
+  }
+}
+/*# sourceMappingURL=keyframes.css.map */

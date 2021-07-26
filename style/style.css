@@ -55,6 +55,15 @@
   100% {
     opacity: 0;
   }
+  0% {
+    z-index: 999;
+  }
+  99% {
+    z-index: 999;
+  }
+  100% {
+    z-index: -999;
+  }
 }
 
 @keyframes hide {
@@ -66,6 +75,15 @@
   }
   100% {
     opacity: 0;
+  }
+  0% {
+    z-index: 999;
+  }
+  99% {
+    z-index: 999;
+  }
+  100% {
+    z-index: -999;
   }
 }
 
@@ -130,7 +148,7 @@ footer ul {
   background-color: rgba(0, 0, 0, 0.7);
   -webkit-animation: hide 3000ms forwards;
           animation: hide 3000ms forwards;
-  z-index: 1;
+  z-index: 999;
 }
 
 .loader p {
@@ -333,6 +351,21 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   color: white;
+}
+
+#header-content__btn:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  -webkit-box-shadow: 0 5px 10px 0 black;
+          box-shadow: 0 5px 10px 0 black;
+  -webkit-transition: -webkit-filter 200ms ease-in;
+  transition: -webkit-filter 200ms ease-in;
+  transition: filter 200ms ease-in;
+  transition: filter 200ms ease-in, -webkit-filter 200ms ease-in;
+  -webkit-transition: -webkit-box-shadow 200ms ease-in;
+  transition: -webkit-box-shadow 200ms ease-in;
+  transition: box-shadow 200ms ease-in;
+  transition: box-shadow 200ms ease-in, -webkit-box-shadow 200ms ease-in;
 }
 
 #main-content {
@@ -556,10 +589,14 @@ nav {
 
 #restaurants .restaurants-link__info .heart-container:hover .fa-heart--empty {
   opacity: 0;
+  -webkit-transition: opacity 500ms ease-out;
+  transition: opacity 500ms ease-out;
 }
 
 #restaurants .restaurants-link__info .heart-container:hover .fa-heart--full {
   opacity: 100%;
+  -webkit-transition: opacity 500ms ease-out;
+  transition: opacity 500ms ease-out;
   background-image: linear-gradient(45deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;

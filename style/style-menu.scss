@@ -69,7 +69,7 @@
     background: white;
     overflow: hidden;
     margin-bottom: 20px;
-    
+
     &:hover{
 
         .menu-card__checkbox{
@@ -120,7 +120,7 @@
     width: 220px;
         background-image: linear-gradient(166deg, $secondary-color, $primary-color);
         @include button;
-        @include flex-allcenter
+        @include flex-allcenter;
         color: white;
         margin-bottom: 100px;
 }

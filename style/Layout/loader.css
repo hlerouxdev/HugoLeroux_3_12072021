@@ -1,0 +1,65 @@
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-animation: hide 3000ms forwards;
+          animation: hide 3000ms forwards;
+  z-index: 999;
+}
+
+.loader p {
+  font-family: 'shrikhand';
+  color: white;
+}
+
+.loader-icone {
+  font-size: 4em;
+  color: #99E2D0;
+  -webkit-animation: rotate 2000ms infinite;
+          animation: rotate 2000ms infinite;
+}
+
+.loader-ellipses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.loader-ellipses span {
+  background-color: #9356DC;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-animation: loader-grow 2000ms infinite alternate;
+          animation: loader-grow 2000ms infinite alternate;
+}
+
+.loader-ellipses span:nth-child(2) {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+.loader-ellipses span:nth-child(3) {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+/*# sourceMappingURL=loader.css.map */

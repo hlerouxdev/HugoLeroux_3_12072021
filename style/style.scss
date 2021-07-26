@@ -48,6 +48,14 @@
             @include button;
             @include flex-allcenter;
             color: white;
+
+            &:hover{
+                filter: brightness(110%);
+                box-shadow: 0 5px 10px 0 black;
+                transition: filter 200ms ease-in;
+                transition: box-shadow 200ms ease-in;
+            }
+
         }
     }
 
@@ -189,10 +197,12 @@
 
                         &--empty{
                             opacity: 0;
+                            transition: opacity 500ms ease-out; 
                         }
 
                         &--full{
                             opacity: 100%;
+                            transition: opacity 500ms ease-out;
                             background-image: linear-gradient(45deg, $secondary-color, $primary-color);
                             -webkit-background-clip: text;
                             background-clip: text;
