@@ -115,14 +115,6 @@
     &:nth-child(4){animation-delay: 1000ms;}
     &:nth-child(5){animation-delay: 1500ms;}
 
-    &:hover{
-
-        .menu-card__checkbox{
-            margin-right: 0;
-        }
-
-    }
-
     p{
         margin: 10px;
     }
@@ -135,6 +127,15 @@
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+        width: 100%;
+
+        p{
+            font-size: 0.9em;
+        }
+
+        .price{
+            width: 25px;
+        }
 
         &__text{
             &, p{
@@ -153,8 +154,28 @@
         height: 100%;
         background: $tertiary-color;
         color: white;
-        font-size: 1.5em;
+        font-size: 2em;
         margin-right: -75px;
+        transition: margin 500ms;
+    }
+
+    &:hover{
+
+        .menu-card{
+
+            &__info{
+                width: calc( 100% - 75px );
+            }
+            &__checkbox{
+                margin-right: 0;
+            }
+
+        }
+
+        .fa-check-circle{
+            animation: rotate 500ms ease-in-out;
+        }
+
     }
 
 

@@ -356,10 +356,6 @@ nav {
           animation-delay: 1500ms;
 }
 
-.menu-card:hover .menu-card__checkbox {
-  margin-right: 0;
-}
-
 .menu-card p {
   margin: 10px;
 }
@@ -378,6 +374,15 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
+}
+
+.menu-card__info p {
+  font-size: 0.9em;
+}
+
+.menu-card__info .price {
+  width: 25px;
 }
 
 .menu-card__info__text, .menu-card__info__text p {
@@ -400,8 +405,23 @@ nav {
   height: 100%;
   background: #99E2D0;
   color: white;
-  font-size: 1.5em;
+  font-size: 2em;
   margin-right: -75px;
+  -webkit-transition: margin 500ms;
+  transition: margin 500ms;
+}
+
+.menu-card:hover .menu-card__info {
+  width: calc( 100% - 75px);
+}
+
+.menu-card:hover .menu-card__checkbox {
+  margin-right: 0;
+}
+
+.menu-card:hover .fa-check-circle {
+  -webkit-animation: rotate 500ms ease-in-out;
+          animation: rotate 500ms ease-in-out;
 }
 
 .btn-color {
