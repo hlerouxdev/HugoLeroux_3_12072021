@@ -281,9 +281,15 @@ nav {
 #menu {
   width: 90%;
   margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #menu .menu__section {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,6 +323,8 @@ nav {
   border-radius: 15px;
   -webkit-box-shadow: 0 5px 10px 0 grey;
           box-shadow: 0 5px 10px 0 grey;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
   height: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -375,6 +383,8 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  -webkit-transition: width 500ms;
+  transition: width 500ms;
 }
 
 .menu-card__info p {
@@ -441,5 +451,74 @@ nav {
           align-items: center;
   color: white;
   margin-bottom: 100px;
+}
+
+.btn-color:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  -webkit-box-shadow: 0 5px 10px 0 black;
+          box-shadow: 0 5px 10px 0 black;
+  -webkit-transition: -webkit-filter 200ms ease-in;
+  transition: -webkit-filter 200ms ease-in;
+  transition: filter 200ms ease-in;
+  transition: filter 200ms ease-in, -webkit-filter 200ms ease-in;
+  -webkit-transition: -webkit-box-shadow 200ms ease-in;
+  transition: -webkit-box-shadow 200ms ease-in;
+  transition: box-shadow 200ms ease-in;
+  transition: box-shadow 200ms ease-in, -webkit-box-shadow 200ms ease-in;
+}
+
+/*Breakpoint Tablette*/
+@media only screen and (min-width: 600px) {
+  nav {
+    height: 75px;
+  }
+  .menu-main-content h1 {
+    font-size: 2.5em;
+  }
+  #menu p {
+    font-size: 1em;
+  }
+}
+
+/*Breakpoints desktop*/
+@media only screen and (min-width: 1025px) {
+  nav {
+    position: static;
+    width: 90%;
+    height: 100px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: 5%;
+  }
+  nav #link-home {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 2em;
+    margin-right: 75px;
+  }
+  nav #nav-logo {
+    width: 25%;
+  }
+  .header_img {
+    height: 400px;
+  }
+  #menu {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #menu .menu__section {
+    width: 30%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 /*# sourceMappingURL=style-menu.css.map */

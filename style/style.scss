@@ -48,13 +48,6 @@
             @include button;
             @include flex-allcenter;
             color: white;
-
-            &:hover{
-                filter: brightness(110%);
-                box-shadow: 0 5px 10px 0 black;
-                transition: filter 200ms ease-in;
-                transition: box-shadow 200ms ease-in;
-            }
         }
     }
 
@@ -218,3 +211,85 @@
         }
     }
 
+/*Breakpoint Tablette*/
+@media only screen and (min-width: 600px){
+    nav{
+        height: 75px;
+    }
+
+    #header-content{
+        width: 100%;
+        &__head{
+            width: 100%;
+        }
+    }
+
+    #fonct-content{
+        align-items: center;
+
+        .fonct-btn{
+            width: 75%;
+        }
+    }
+}
+
+/*Breakpoints desktop*/
+@media only screen and (min-width: 1025px){
+   
+    nav{
+        justify-content: left;
+        width: 90%;
+        height: 0;
+
+        #nav-logo{
+            width: 25%;
+            margin-top: 75px;
+        }
+
+    }
+
+    #header-content{
+        width: 90%;
+        align-items: flex-end;
+        margin-bottom: 50px;
+
+        &__head{
+            width: 50%;
+            border-radius: 25px;
+            margin-top: 10px;
+        }
+
+        &__desc{
+            width: 100%;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        &__btn{
+            width: 50%;
+            margin-top: -95px;
+        }
+    }
+
+    #fonct-content{
+        flex-direction: row;
+        justify-content: space-between;
+        height: 125px;
+    }
+
+    #restaurants-content{
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: 700px;
+
+        .restaurants-link{
+            width: 45%;
+            height: 300px;
+            &__img{
+                height: 200px;
+            }
+        }
+    }
+
+    
+}

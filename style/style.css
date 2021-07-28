@@ -47,10 +47,10 @@
 
 @-webkit-keyframes hide {
   0% {
-    opacity: 1;
+    opacity: 100%;
   }
   90% {
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
     opacity: 0;
@@ -68,10 +68,10 @@
 
 @keyframes hide {
   0% {
-    opacity: 1;
+    opacity: 100%;
   }
   90% {
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
     opacity: 0;
@@ -84,6 +84,20 @@
   }
   100% {
     z-index: -999;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  to {
+    opacity: 100%;
+    margin-top: 0;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 100%;
+    margin-top: 0;
   }
 }
 
@@ -602,5 +616,90 @@ nav {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/*Breakpoint Tablette*/
+@media only screen and (min-width: 600px) {
+  nav {
+    height: 75px;
+  }
+  #header-content {
+    width: 100%;
+  }
+  #header-content__head {
+    width: 100%;
+  }
+  #fonct-content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #fonct-content .fonct-btn {
+    width: 75%;
+  }
+}
+
+/*Breakpoints desktop*/
+@media only screen and (min-width: 1025px) {
+  nav {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    width: 90%;
+    height: 0;
+  }
+  nav #nav-logo {
+    width: 25%;
+    margin-top: 75px;
+  }
+  #header-content {
+    width: 90%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-bottom: 50px;
+  }
+  #header-content__head {
+    width: 50%;
+    border-radius: 25px;
+    margin-top: 10px;
+  }
+  #header-content__desc {
+    width: 100%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+  }
+  #header-content__btn {
+    width: 50%;
+    margin-top: -95px;
+  }
+  #fonct-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 125px;
+  }
+  #restaurants-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 700px;
+  }
+  #restaurants-content .restaurants-link {
+    width: 45%;
+    height: 300px;
+  }
+  #restaurants-content .restaurants-link__img {
+    height: 200px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
