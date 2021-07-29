@@ -1,0 +1,54 @@
+@charset "UTF-8";
+nav {
+  /*disposition de la nav*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  position: relative;
+}
+
+#nav-logo {
+  width: 50%;
+}
+
+#link-home {
+  /*div de la flèche pour le retour au menu*/
+  height: 0;
+  position: absolute;
+  left: 25px;
+  bottom: 40px;
+  color: black;
+  font-size: 1.3em;
+}
+
+/*header pour chaque restaurant. Le header reste le même, seul l'image change*/
+.header-img {
+  height: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: -50px;
+}
+
+.header-img-lapalettedugout {
+  background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+
+.header-img-alafrancaise {
+  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+
+.header-img-lanoteenchantee {
+  background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+
+.header-img-ledelicedessens {
+  background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+/*# sourceMappingURL=header.css.map */

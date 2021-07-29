@@ -21,6 +21,7 @@
 
         .heart-container{
             position:relative;
+            top: 7px;
 
             .fa-heart{
                 position: absolute;
@@ -200,6 +201,11 @@
 @media only screen and (min-width: 600px){
     nav{
         height: 75px;
+    }
+
+    #link-home{
+        bottom: 61px;
+        font-size: 2em;
     }
 
     .menu-main-content{

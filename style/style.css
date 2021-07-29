@@ -117,6 +117,10 @@ footer {
   width: 100%;
 }
 
+footer a, footer a:visited {
+  color: white;
+}
+
 footer #footer__logo {
   -webkit-filter: invert(1);
           filter: invert(1);
@@ -244,7 +248,7 @@ nav {
   height: 0;
   position: absolute;
   left: 25px;
-  bottom: 37px;
+  bottom: 40px;
   color: black;
   font-size: 1.3em;
 }

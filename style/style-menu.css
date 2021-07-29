@@ -29,6 +29,10 @@ footer {
   width: 100%;
 }
 
+footer a, footer a:visited {
+  color: white;
+}
+
 footer #footer__logo {
   -webkit-filter: invert(1);
           filter: invert(1);
@@ -91,7 +95,7 @@ nav {
   height: 0;
   position: absolute;
   left: 25px;
-  bottom: 37px;
+  bottom: 40px;
   color: black;
   font-size: 1.3em;
 }
@@ -242,6 +246,7 @@ nav {
 
 .menu-main-content__header .heart-container {
   position: relative;
+  top: 7px;
 }
 
 .menu-main-content__header .heart-container .fa-heart {
@@ -472,6 +477,10 @@ nav {
 @media only screen and (min-width: 600px) {
   nav {
     height: 75px;
+  }
+  #link-home {
+    bottom: 61px;
+    font-size: 2em;
   }
   .menu-main-content h1 {
     font-size: 2.5em;
