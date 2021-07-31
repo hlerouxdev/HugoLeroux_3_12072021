@@ -1,6 +1,7 @@
 @import "Utils/variables.scss";
 @import "Base/fonts.scss";
 @import "Utils/mixins.scss";
+@import "Layout/nav.scss";
 @import "Layout/footer.scss";
 @import "Base/body.scss";
 @import "Base/header.scss";
@@ -11,7 +12,6 @@
     @include flex-columncenter;
     background-color: darken(white, 5%);
     border-radius: 50px 50px 0 0;
-
 
     &__header{
         width: 90%;
@@ -37,26 +37,10 @@
             }
 
             &:hover{
-
                 .fa-heart{
-
-                    &--empty{
-                        opacity: 0;
-                        transition: opacity 500ms ease-out; 
-                    }
-
-                    &--full{
-                        opacity: 100%;
-                        transition: opacity 500ms ease-out;
-                        background-image: linear-gradient(45deg, $secondary-color, $primary-color);
-                        -webkit-background-clip: text;
-                        background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    }
-
+                    @include heart-change;
                 }
-
-            }    
+            }       
 
         }
         
@@ -200,11 +184,12 @@
 /*Breakpoint Tablette*/
 @media only screen and (min-width: 600px){
     nav{
-        height: 75px;
+        height: 100px;
     }
 
     #link-home{
-        bottom: 61px;
+        bottom: 74px;
+        left: 40px;
         font-size: 2em;
     }
 
@@ -222,10 +207,11 @@
     }
 }
 
-/*Breakpoints desktop*/
-@media only screen and (min-width: 1025px){
+/*Breakpoints desktop et tablette landscape*/
+@media only screen and (min-width: 1025px), screen and (min-width: 600px) and (orientation: landscape){
     nav{
         position: static;
+        height: 100px;
         width: 90%;
         height: 100px;
         justify-content: flex-start;
@@ -240,7 +226,8 @@
         }
 
         #nav-logo{
-            width: 25%;
+            width: 30%;
+            margin-left: 26%;
         }
     }
 
