@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("../Utils/mixins.scss");
+@import url("../Utils/_mixins.scss");
 @font-face {
   font-family: 'roboto';
   src: url("../fonts/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/roboto-regular-webfont.woff") format("woff");
@@ -112,7 +112,27 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 50px;
+  height: 60px;
+  font-family: 'shrikhand';
+  position: relative;
+}
+
+nav h1 {
+  font-size: 2em;
+}
+
+@media only screen and (min-width: 600px) {
+  nav {
+    height: 100px;
+  }
+  nav h1 {
+    font-size: 5em;
+  }
+  nav #link-home {
+    bottom: 74px;
+    left: -200px;
+    font-size: 3em;
+  }
 }
 
 footer {
@@ -143,6 +163,7 @@ footer #footer__logo {
 
 footer #footer__content {
   width: 90%;
+  max-width: 1400px;
   line-height: 30px;
 }
 
@@ -238,59 +259,6 @@ body a p, body a:visited p, body a:active p {
   margin: 0;
 }
 
-nav {
-  /*disposition de la nav*/
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 50px;
-  position: relative;
-}
-
-#nav-logo {
-  width: 50%;
-}
-
-#link-home {
-  /*div de la flèche pour le retour au menu*/
-  height: 0;
-  position: absolute;
-  left: 25px;
-  bottom: 40px;
-  color: black;
-  font-size: 1.3em;
-}
-
-/*header pour chaque restaurant. Le header reste le même, seul l'image change*/
-.header-img {
-  height: 250px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-bottom: -50px;
-}
-
-.header-img-lapalettedugout {
-  background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-}
-
-.header-img-alafrancaise {
-  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-}
-
-.header-img-lanoteenchantee {
-  background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-}
-
-.header-img-ledelicedessens {
-  background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -302,10 +270,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-#link-home {
-  display: none;
 }
 
 #header-content {
@@ -391,6 +355,46 @@ header {
   transition: -webkit-box-shadow 1000ms;
   transition: box-shadow 1000ms;
   transition: box-shadow 1000ms, -webkit-box-shadow 1000ms;
+}
+
+#link-home {
+  /*div de la flèche pour le retour au menu*/
+  height: 0;
+  position: absolute;
+  left: -65px;
+  bottom: 40px;
+  color: black;
+  font-size: 1.3em;
+}
+
+/*header pour chaque restaurant. Le header reste le même, seul l'image change*/
+.header-img {
+  height: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: -50px;
+  width: 100%;
+  z-index: -1;
+}
+
+.header-img-lapalettedugout {
+  background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+
+.header-img-alafrancaise {
+  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+
+.header-img-lanoteenchantee {
+  background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+
+.header-img-ledelicedessens {
+  background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+
+#link-home {
+  display: none;
 }
 
 #main-content {
@@ -641,9 +645,6 @@ header {
 
 /*Breakpoint Tablette*/
 @media only screen and (min-width: 600px) and (orientation: portrait) {
-  nav {
-    height: 75px;
-  }
   #header-content {
     width: 100%;
   }
@@ -673,17 +674,15 @@ header {
 
 /*Breakpoints desktop et tablette landscape*/
 @media only screen and (min-width: 1025px), screen and (min-width: 600px) and (orientation: landscape) {
-  nav {
-    height: 100px;
-  }
-  nav #nav-logo {
-    width: 100%;
-  }
   #header-content {
     width: 100%;
+    max-width: 1400px;
   }
   #header-content__head {
     width: 100%;
+  }
+  #fonct {
+    max-width: 1400px;
   }
   #fonct-content {
     -webkit-box-orient: horizontal;
@@ -693,7 +692,7 @@ header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    height: 125px;
+    height: 150px;
   }
   #fonct-content .fonct-btn {
     width: 33%;
@@ -705,6 +704,10 @@ header {
     height: 60px;
     padding-left: 10px;
   }
+  #restaurants-box {
+    max-width: 1400px;
+    width: 90%;
+  }
   #restaurants-content {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -713,6 +716,9 @@ header {
         -ms-flex-direction: row;
             flex-direction: row;
     height: 700px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   #restaurants-content .restaurants-link {
     width: 45%;
@@ -726,6 +732,9 @@ header {
   #restaurants-content .restaurants-link__img-enchantee {
     -o-object-position: 0 60%;
        object-position: 0 60%;
+  }
+  footer #footer-content {
+    max-width: 1400px;
   }
 }
 /*# sourceMappingURL=style.css.map */

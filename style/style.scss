@@ -1,52 +1,16 @@
-@import "Utils/variables.scss";
-@import "Base/fonts.scss";
-@import "Utils/mixins.scss";
-@import "Utils/keyframes.scss";
-@import "Layout/nav.scss";
-@import "Layout/footer.scss";
-@import "Layout/loader.scss";
-@import "Base/body.scss";
-@import "Base/header.scss";
+@import "Utils/_variables.scss";
+@import "Base/_fonts.scss";
+@import "Utils/_mixins.scss";
+@import "Utils/_keyframes.scss";
+@import "Layout/_nav.scss";
+@import "Layout/_footer.scss";
+@import "Layout/_loader.scss";
+@import "Base/_body.scss";
+@import "Base/_header.scss";
 
-    header{
-        @include flex-columncenter;
-    }
-
-    #link-home{
-        display: none;
-    }
-
-    #header-content{
-        @include flex-columncenter;
-
-        &__head{
-            @include flex-allcenter;
-            background-color: #f6f6f6;
-            width: 100%;
-            box-shadow: inset 0 8px 10px -10px black;
-            font-weight: bold;
-
-        }
-
-        .header-icone{
-            margin-right: 20px;
-        }
-
-        &__desc{
-            @include flex-columncenter;
-            width: 80%;
-            text-align: center;
-        }
-
-        &__btn{
-            height: 50px;
-            width: 220px;
-            background-image: linear-gradient(166deg, $secondary-color, $primary-color);
-            @include button;
-            @include flex-allcenter;
-            color: white;
-        }
-    }
+#link-home{
+    display: none;
+}
 
     #main-content{
         @include flex-columncenter;
@@ -201,9 +165,6 @@
 
 /*Breakpoint Tablette*/
 @media only screen and (min-width: 600px) and (orientation: portrait){
-    nav{
-        height: 75px;
-    }
 
     #header-content{
         width: 100%;
@@ -236,27 +197,22 @@
 
 /*Breakpoints desktop et tablette landscape*/
 @media only screen and (min-width: 1025px), screen and (min-width: 600px) and (orientation: landscape){
- 
-    nav{
-        height: 100px;
-
-        #nav-logo{
-            width: 100%;
-        }
-
-    }
 
     #header-content{
         width: 100%;
+        max-width: 1400px;
         &__head{
             width: 100%;
         }
     }
 
+    #fonct{
+        max-width: 1400px;
+    }
     #fonct-content{
         flex-direction: row;
         justify-content: space-between;
-        height: 125px;
+        height: 150px;
 
         .fonct-btn{
             width: 33%;
@@ -269,10 +225,16 @@
 
     }
 
+    #restaurants-box{
+        max-width: 1400px;
+        width: 90%;
+    }
+
     #restaurants-content{
         flex-wrap: wrap;
         flex-direction: row;
         height: 700px;
+        justify-content: space-between;
 
         .restaurants-link{
             width: 45%;
@@ -285,5 +247,12 @@
                 }
             }
         }
-    }    
+    }
+    
+    footer{
+        #footer-content{
+            
+        max-width: 1400px;
+        }
+    }
 }

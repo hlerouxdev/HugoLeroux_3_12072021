@@ -1,11 +1,11 @@
-@import "Utils/variables.scss";
-@import "Base/fonts.scss";
-@import "Utils/mixins.scss";
-@import "Layout/nav.scss";
-@import "Layout/footer.scss";
-@import "Base/body.scss";
-@import "Base/header.scss";
-@import "Utils/keyframes.scss";
+@import "Utils/_variables.scss";
+@import "Base/_fonts.scss";
+@import "Utils/_mixins.scss";
+@import "Layout/_nav.scss";
+@import "Layout/_footer.scss";
+@import "Base/_body.scss";
+@import "Base/_header.scss";
+@import "Utils/_keyframes.scss";
 
 .menu-main-content{
 
@@ -15,6 +15,7 @@
 
     &__header{
         width: 90%;
+        max-width: 1400px;
         @include flex-allcenter;
         justify-content: space-between;
         margin-top: 20px;
@@ -54,9 +55,10 @@
 
 #menu{
     width: 90%;
+    max-width: 1400px;
     margin-bottom: 50px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 
     .menu__section{
         width: 100%;
@@ -183,15 +185,6 @@
 
 /*Breakpoint Tablette*/
 @media only screen and (min-width: 600px){
-    nav{
-        height: 100px;
-    }
-
-    #link-home{
-        bottom: 74px;
-        left: 40px;
-        font-size: 2em;
-    }
 
     .menu-main-content{
         
@@ -209,37 +202,19 @@
 
 /*Breakpoints desktop et tablette landscape*/
 @media only screen and (min-width: 1025px), screen and (min-width: 600px) and (orientation: landscape){
-    nav{
-        position: static;
-        height: 100px;
-        width: 90%;
-        height: 100px;
-        justify-content: flex-start;
-        margin-left: 5%;
-
-        #link-home{
-            position: static;
-            display: flex;
-            align-items: center;
-            font-size: 2em;
-            margin-right: 75px;
-        }
-
-        #nav-logo{
-            width: 30%;
-            margin-left: 26%;
-        }
-    }
 
     .header_img{
         height: 400px;
     }
 
-    #menu{
-        justify-content: space-between;
-        .menu__section{
-            width: 30%;
-            justify-content: flex-start;
+    .menu-main-content{
+        #menu{
+            flex-direction: row;
+            justify-content: space-between;
+            .menu__section{
+                width: 30%;
+                justify-content: flex-start;
+            }
         }
     }
 

@@ -1,0 +1,26 @@
+@import url("../Utils/_mixins.scss");
+
+nav{
+    @include flex-allcenter;
+    height: 60px;
+    font-family: 'shrikhand';
+    position: relative;
+
+    h1{
+        font-size: 2em;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    nav{
+        height: 100px;
+        h1{
+            font-size: 5em;
+        }
+        #link-home {
+            bottom: 74px;
+            left: -200px;
+            font-size: 3em;
+        }
+    }
+}
